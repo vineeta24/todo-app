@@ -1,6 +1,8 @@
 # todo-app
 [Demo of todo-app](https://vineeta24.github.io/todo-app/)
 
+![](/public/demo.gif)
+
 ### Summary
 
 todo-app is a single page frontend application to create daily task with feature of sorting active and completed task with react classes and hooks.
