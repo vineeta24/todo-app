@@ -1,6 +1,15 @@
 body {
   background: #eee5ff;
 }
+p, span {
+  padding: 0 0.5rem 0 0.3rem;
+}
+.col-1, .col-10 {
+  padding: 0 !important;
+}
+.col-1 {
+  text-align: center;
+}
 
 /* Header */
 .myNavbar {
@@ -64,7 +73,7 @@ body {
 .checkbox .checkmark {
   position: absolute;
   left: 0;
-  margin: -7px 0 0 8px;
+  margin: -7px 0 0 3px;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -97,11 +106,10 @@ body {
   transform: rotate(45deg);
 }
 .todo-item .todo-title {
-  margin-left: 15px;
+  margin-left: 2px;
 }
 .remove-btn {
   float: right;
-  margin-top: -0.3rem;
 }
 
 /* list item transition */
@@ -118,4 +126,23 @@ body {
 .item-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-in;
+}
+
+
+@media screen and (min-width: 900px) {
+  .checkbox .checkmark {
+    left: 25px;
+    height: 25px;
+    width: 25px;
+  }
+  .checkbox .checkmark:after {
+    left: 9px;
+    top: 4px;
+    width: 6px;
+    height: 13px;
+  }
+  .remove-btn {
+    font-size: 17px;
+    float: right;
+  }
 }
