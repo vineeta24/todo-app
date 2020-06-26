@@ -17,18 +17,25 @@ class TodoItem extends Component {
             <Container style={{ width: '100%' }}>
                 <CSSTransition key={id} timeout={500} classNames="item" >
                     <ListGroup.Item className="todo-item">
-                        <label className="checkbox">
-                            <input onChange={this.props.markComplete.bind(this, id)} type="checkbox"/>
-                            <span className="checkmark"></span>
-                        </label>
-                        <span className="todo-title">{name}</span>
-                        <Button
-                        onClick={this.props.delTodo.bind(this, id)}
-                        className="remove-btn"
-                        variant="danger"
-                        size="sm"
-                        >&times;</Button>
-
+                        <div className="row">
+                            <div className="col-1">
+                                <label className="checkbox">
+                                <input onChange={this.props.markComplete.bind(this, id)} type="checkbox"/>
+                                <span className="checkmark"></span>
+                                </label>
+                            </div>
+                            <div className="col-10">
+                                <p className="todo-title">{name}</p>
+                            </div>
+                            <div className="col-1">
+                                <Button
+                                onClick={this.props.delTodo.bind(this, id)}
+                                className="remove-btn"
+                                variant="danger"
+                                size="sm"
+                                >&times;</Button>
+                            </div>
+                        </div>
                     </ListGroup.Item>
                 </CSSTransition>
             </Container>
